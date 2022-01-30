@@ -1,0 +1,10 @@
+# dependencies
+/client/node_modules
+/client/src/img
+
+client/node_modules
+node_modules
+
+client/src/img
+images
+.env

@@ -1,0 +1,25 @@
+.about {
+  /* display: flex; */
+  font-family: 'Lora', sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: #c3dcbe; */
+  background-color: #eaf6fd;
+  height: 100vh;
+}
+
+.aboutTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: lightcoral;
+}
+
+p {
+  font-family: 'Lora', sans-serif;
+  /* font-family: 'Josefin Sans', sans-serif; */
+  margin: 15px 0;
+  font-size: 20px;
+}
