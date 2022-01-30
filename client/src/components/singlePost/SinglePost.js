@@ -33,7 +33,8 @@ export default function SinglePost() {
   
   const handleDelete = async () => {
     try {
-      await axios.delete(`/posts/${post._id}`, {
+      await axiosInstance.delete(`/posts/${post._id}`, {
+      // await axios.delete(`/posts/${post._id}`, {
         data: { username: user.username }
       })
       window.location.replace("/")
@@ -42,7 +43,8 @@ export default function SinglePost() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/posts/${post._id}`, {
+      await axiosInstance.put(`/posts/${post._id}`, {
+      // await axios.put(`/posts/${post._id}`, {
         username: user.username, title: title, desc: desc
       })
       // window.location.reload()
