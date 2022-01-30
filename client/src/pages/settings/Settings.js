@@ -1,5 +1,5 @@
-import axios from "axios"
-// import { axiosInstance } from "../../config"
+// import axios from "axios"
+import { axiosInstance } from "../../config"
 import { useContext, useState } from 'react'
 import Sidebar from '../../components/sidebar/Sidebar'
 import { Context } from '../../context/Context'
@@ -52,8 +52,8 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename
       try {
-        await axios.post("/upload", data)
-        // await axiosInstance.post("/upload", data)
+        // await axios.post("/upload", data)
+        await axiosInstance.post("/upload", data)
       } catch (err) {
         console.log('err1')
       }
@@ -61,8 +61,8 @@ export default function Settings() {
     console.log('ok2', user)
     try {
       console.log('updatedUser', updatedUser)
-      const res =await axios.put("/users/"+user._id, updatedUser)
-      // const res =await axiosInstance.put("/users/"+user._id, updatedUser)
+      // const res =await axios.put("/users/"+user._id, updatedUser)
+      const res =await axiosInstance.put("/users/"+user._id, updatedUser)
       setSuccess(true)
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data })
       console.log('setSuccess')
