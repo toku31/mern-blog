@@ -1,8 +1,9 @@
+import { axiosInstance } from "../../config";
 import "./singlePost.css"
 // import lake from '../../img/lake_md.jpg'
 import { useLocation } from "react-router"
 import { useEffect, useState, useContext } from "react"
-import axios from "axios"
+// import axios from "axios"
 import { Link } from "react-router-dom"
 import { Context } from '../../context/Context'
 
@@ -20,7 +21,8 @@ export default function SinglePost() {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/posts/" + path)
+      const res = await axiosInstance.get("/posts/" + path)
+      // const res = await axios.get("/posts/" + path)
       console.log('getPost:res', res)
       setPost(res.data)
       setTitle(res.data.title)
