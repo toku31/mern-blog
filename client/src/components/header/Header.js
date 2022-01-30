@@ -1,5 +1,5 @@
 import "./header.css"
-import tree from '../../img/tree_md.jpg'
+// import tree from '../../img/tree_md.jpg'
 
 export default function Header() {
   return (
